@@ -1,5 +1,10 @@
 class Api::IngredientsController < ApplicationController
 
+  def index
+    @ingredients = Ingredient.all
+    render json: @ingredients
+  end
+
   def new
     @ingredient = Ingredient.new
   end
@@ -24,6 +29,7 @@ class Api::IngredientsController < ApplicationController
 
   def show     
     @ingredient = Ingredient.find(params[:id])
+    render json @ingredient
   end
 
   def destroy     
@@ -34,7 +40,7 @@ class Api::IngredientsController < ApplicationController
 
   private
     def ingredient_params
-      params.require(:ingredient).permit(:name, :purchase_date, :expiration_date, :in_freezer, :category_id, :recipe_id)
+      params.require(:ingredient).permit(:name, :purchase_date, :expiration_date, :in_freezer, :category_id)
     end
 
 end
