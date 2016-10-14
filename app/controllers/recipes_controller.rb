@@ -1,17 +1,12 @@
 class Api::RecipesController < ApplicationController
 
-  def index
-    @recipes = Recipe.all
-    render json: @recipes
-  end
-
   def new
     @recipe = Recipe.new
   end
 
   def create
-    @recipe = Recipe.new(recipe_params) 
-      if @recipe.save && !Recipe.find_by(title: @recipe.title)
+    @recipe = Recipe.new(recipe_params)
+      if @recipe.save
         render json: @recipe, status: 201
       else
         render json: {status: "There is an error"}
@@ -29,7 +24,6 @@ class Api::RecipesController < ApplicationController
 
   def show     
     @recipe = Recipe.find(params[:id])
-    render json: @recipe
   end
 
   def destroy     
@@ -40,7 +34,7 @@ class Api::RecipesController < ApplicationController
 
   private
     def recipe_params
-      params.require(:recipe).permit(:title, :image_url, :ingredients_detail, :source_url, :publisher)
+      params.require(:recipe).permit(:title, :image_url, :ingredients, :source_url, :publisher)
     end
     
 end
