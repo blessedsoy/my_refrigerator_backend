@@ -1,4 +1,4 @@
-class Api::StaticController < ApplicationController
+class StaticController < ApplicationController
 
   def index
   end
