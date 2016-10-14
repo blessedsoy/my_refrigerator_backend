@@ -1,4 +1,4 @@
-class RecipesController < ApplicationController
+class Api::RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new

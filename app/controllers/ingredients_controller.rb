@@ -1,4 +1,4 @@
-class IngredientsController < ApplicationController
+class Api::IngredientsController < ApplicationController
 
   def new
     @ingredient = Ingredient.new
