@@ -1,5 +1,10 @@
 class Api::RecipesController < ApplicationController
 
+  def index
+    @recipes = Recipe.all 
+    render json: @recipes
+  end
+  
   def new
     @recipe = Recipe.new
   end
@@ -34,7 +39,7 @@ class Api::RecipesController < ApplicationController
 
   private
     def recipe_params
-      params.require(:recipe).permit(:title, :image_url, :ingredients, :source_url, :publisher)
+      params.require(:recipe).permit(:title, :image_url, :ingredients_detail, :source_url, :publisher)
     end
     
 end
