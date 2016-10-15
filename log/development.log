@@ -1333,3 +1333,117 @@ Migrating to RemoveRecipeIdFromIngredients (20161014130716)
   [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
   [1m[36mCategory Load (5.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "categories" SET "name" = ?, "updated_at" = ? WHERE "categories"."id" = ?[0m  [["name", "Fermented Foods"], ["updated_at", 2016-10-15 20:52:48 UTC], ["id", 7]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mIngredient Load (1.5ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" ORDER BY "ingredients"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2016-10-15 18:33:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 315ms (Views: 297.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-15 18:38:57 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (1.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers]   [1m[36mRecipeIngredient Load (2.8ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+[active_model_serializers]   [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers]   [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (146.35ms)
+Completed 200 OK in 256ms (Views: 216.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-15 18:39:00 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+[active_model_serializers]   [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers]   [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.71ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/ingredients/" for ::1 at 2016-10-15 18:39:09 -0400
+Processing by Api::IngredientsController#create as HTML
+  Parameters: {"category_id"=>"2", "name"=>"Mango", "in_freezer"=>"true", "constratints"=>{"format"=>:json}, "ingredient"=>{"name"=>"Mango", "in_freezer"=>"true", "category_id"=>"2"}}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "Mango"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "in_freezer", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mango"], ["in_freezer", true], ["category_id", 2], ["created_at", 2016-10-15 22:39:09 UTC], ["updated_at", 2016-10-15 22:39:09 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.4ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+[active_model_serializers]   [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+[active_model_serializers] Rendered IngredientSerializer with ActiveModelSerializers::Adapter::Attributes (5.66ms)
+Completed 201 Created in 49ms (Views: 6.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-15 18:39:11 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+[active_model_serializers]   [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers]   [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+[active_model_serializers]   [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.2ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-15 18:39:16 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+[active_model_serializers]   [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 1]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers]   [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+[active_model_serializers]   [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.15ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/api/ingredients/1" for ::1 at 2016-10-15 18:39:21 -0400
+Processing by Api::IngredientsController#destroy as HTML
+  Parameters: {"constratints"=>{"format"=>:json}, "id"=>"1"}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-15 18:39:21 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 2]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.4ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers]   [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 3]]
+[active_model_serializers]   [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+[active_model_serializers]   [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.19ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 1.2ms)
+
+
