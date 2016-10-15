@@ -1341,6 +1341,7 @@ DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`
   [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "cucumber"], ["LIMIT", 1]]
   [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "cucumber"], ["category_id", 1], ["created_at", 2016-10-14 17:45:20 UTC], ["updated_at", 2016-10-14 17:45:20 UTC]]
   [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+<<<<<<< HEAD
 >>>>>>> e4dd05ee14a613da6ef627ae1256c834f1615172
   [1m[36mIngredient Load (1.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
 Started GET "/api/categories" for ::1 at 2016-10-14 14:03:50 -0400
@@ -5609,3 +5610,53 @@ Processing by Api::CategoriesController#index as HTML
 Completed 200 OK in 79ms (Views: 66.7ms | ActiveRecord: 1.7ms)
 
 
+=======
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "categories" SET "name" = ?, "updated_at" = ? WHERE "categories"."id" = ?[0m  [["name", "Fermented foods"], ["updated_at", 2016-10-14 21:02:07 UTC], ["id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCategory Load (5.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+>>>>>>> 7c35a054cc04013ce7e7decb0bc6d72c266fc1c4
+Started GET "/api/categories" for ::1 at 2016-10-15 16:50:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::CategoriesController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 1]]
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.15ms)
+Completed 200 OK in 75ms (Views: 63.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/categories" for ::1 at 2016-10-15 16:50:58 -0400
+Processing by Api::CategoriesController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 1]]
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   [1m[36mIngredient Load (0.0ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.04ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
