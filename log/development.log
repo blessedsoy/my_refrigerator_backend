@@ -13634,3 +13634,112 @@ Processing by StaticController#index as HTML
 Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 44ms (Views: 19.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:59:48 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mIngredient Load (2.7ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+Started POST "/api/ingredients/" for ::1 at 2016-10-18 12:00:30 -0400
+Processing by Api::IngredientsController#create as HTML
+  Parameters: {"category_id"=>"2", "name"=>"Apple", "in_freezer"=>"false", "purchase_date"=>"2016-10-02", "expiration_date"=>"2016-10-23", "constratints"=>{"format"=>:json}, "ingredient"=>{"name"=>"Apple", "purchase_date"=>"2016-10-02", "expiration_date"=>"2016-10-23", "in_freezer"=>"false", "category_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "Apple"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.5ms)
+Completed 200 OK in 118ms (Views: 8.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 12:00:31 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
