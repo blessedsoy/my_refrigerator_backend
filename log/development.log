@@ -13304,3 +13304,123 @@ Migrating to RemoveRecipeIdFromIngredients (20161014130716)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+  [1m[36mRecipe Load (2.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "ingredients_detail", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "banana pudding"], ["ingredients_detail", "---\n- banana\n- sugar\n"], ["created_at", 2016-10-18 00:24:18 UTC], ["updated_at", 2016-10-18 00:24:18 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Started GET "/" for ::1 at 2016-10-18 11:55:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 466ms (Views: 451.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 32ms (Views: 17.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:28 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/ingredients/" for ::1 at 2016-10-18 11:55:45 -0400
+Processing by Api::IngredientsController#create as HTML
+  Parameters: {"category_id"=>"2", "name"=>"Apple", "in_freezer"=>"false", "purchase_date"=>"2016-10-11", "expiration_date"=>"2016-10-25", "constratints"=>{"format"=>:json}, "ingredient"=>{"name"=>"Apple", "purchase_date"=>"2016-10-11", "expiration_date"=>"2016-10-25", "in_freezer"=>"false", "category_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? LIMIT ?[0m  [["name", "Apple"], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 200 OK in 81ms (Views: 6.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/ingredients" for ::1 at 2016-10-18 11:55:45 -0400
+Processing by Api::IngredientsController#index as HTML
+  Parameters: {"constratints"=>{"format"=>:json}}
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
