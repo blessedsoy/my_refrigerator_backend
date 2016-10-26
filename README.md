@@ -1,24 +1,11 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My Refrigerator
 
-Things you may want to cover:
 
-* Ruby version
+This is an app that helps you organize and keep track of expiration date of foods in your refrigerator.
 
-* System dependencies
+This repo is for the server side.
 
-* Configuration
+For the client side, please visit https://github.com/blessedsoy/my_refrigerator_backend
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+After you clone or download this repo, run 'ionic serve'

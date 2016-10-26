@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024175123) do
+ActiveRecord::Schema.define(version: 20161026190932) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -24,8 +24,9 @@ ActiveRecord::Schema.define(version: 20161024175123) do
     t.date     "expiration_date"
     t.boolean  "in_freezer"
     t.integer  "category_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "count",           default: 0
   end
 
   create_table "recipe_ingredients", force: :cascade do |t|
